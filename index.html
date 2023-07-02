@@ -1,66 +1,45 @@
-<!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="th">
+    <head>
+        <meta charset="utf-8" >
+        <meta name="Keywords" content="FAST VPN PRO" />
+        <meta name="Description" content="FAST VPN PRO" />
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+            <!-- Swal -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.0/dist/sweetalert2.all.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<html>
-<head>
-    
-<style>
-a:link, a:visited {
-  background-color: #f44336;
-  color: white;
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
- 
-}
-​
-a:hover, a:active {
-  background-color: red;
-}
 
-body {
-  float:;
-  width: 315px;
-//  border: 1px solid #73AD21;
-  padding: 11px;
-  
-}
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-.vertical-center {
-  margin: center;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.btn {
-  background-color: DodgerBlue;
-  border: none;
-  color: white;
-  padding: 12px 30px;
-  cursor: pointer;
-  font-size: 20px;
-}
-/* Darker background on mouse-over */
-//.btn:hover {
-  background-color: RoyalBlue;
-}
-</style>
+          </head>
+    <body>
+</body>
 
-</head>
-
-<center>
-<body class="vertical-center">
-    
-<marquee behavior="scroll" direction="left">
-                        <p>
-                            <span class="badge badge-danger text-white" style="box-shadow: 0 0 5px rgb(255, 255, 255);">ကြေငြာ!!!</span>
-                            FAST VPN PRO New Updated 😘
-                        </p>
-                    </marquee>	
-<p>Download the new version now</p>
-
-<a href="https://www.mediafire.com/file/njcnp0gmwml7u5b/Safe+VPN+V_1.0.3.apk/file" target="_blank" class="fa fa-download"> Version 1.0.3</a>
-
+<script>
+  let timerInterval
+Swal.fire({
+icon: "success",
+  title: '🤷‍♂️ကျေးဇူးပြု၍ 3 စက္ကန့်စောင့်ပါ🤷‍♂️',
+  html: '<br>အက်ပ်ကို ဖွင့်နေသည်<br>',
+  timer: 3000,
+  showConfirmButton: false,
+  timerProgressBar: true,
+  allowOutsideClick: false,
+  didOpen: () => {
+    Swal.showLoading()
+    const b = Swal.getHtmlContainer().querySelector('b')
+    timerInterval = setInterval(() => {
+      b.textContent = Swal.getTimerLeft()
+    }, 100)
+  },
+  willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+  /* Read more about handling dismissals below */
+  if (result.dismiss === Swal.DismissReason.timer) {
+   window.location="https://play.google.com/store/apps/details?id=fastvpn.painghein.com";
+  }
+})
+</script>
